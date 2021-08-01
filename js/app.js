@@ -7,8 +7,8 @@ window.onscroll = function () {
 };
 
 $(function () {
-    var $blocks = $('.animBlock.notViewed');
-    var $window = $(window);
+    const $blocks = $('.animBlock.notViewed');
+    const $window = $(window);
 
     $window.on('scroll', function (e) {
         $blocks.each(function (i, elem) {
@@ -21,15 +21,15 @@ $(function () {
 });
 
 function isScrolledIntoView(elem) {
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
-    var elemOffset = 0;
+    const docViewTop = $(window).scrollTop();
+    const docViewBottom = docViewTop + $(window).height();
+    let elemOffset = 0;
 
     if (elem.data('offset') != undefined) {
         elemOffset = elem.data('offset');
     }
-    var elemTop = $(elem).offset().top;
-    var elemBottom = elemTop + $(elem).height();
+    let elemTop = $(elem).offset().top;
+    let elemBottom = elemTop + $(elem).height();
 
     if (elemOffset != 0) { // custom offset is updated based on scrolling direction
         if (docViewTop - elemTop >= 0) {

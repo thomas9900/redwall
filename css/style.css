@@ -19,9 +19,11 @@ body:before, body:after {
     height: 16px;
     z-index: 99;
 }
+
 body:before {
     top: 0;
 }
+
 body:after {
     bottom: 0;
 }
@@ -46,11 +48,8 @@ body:after {
   position: relative;
 }
 
-.header-container {
-  height: calc(100vh - 216px);
-}
-
 .gradient-div {
+  height: calc(100vh - 216px);
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.67) 100%);
   border-bottom-right-radius: 90px;
 }
@@ -63,8 +62,8 @@ header {
 }
 
 .header-h1 {
-  margin-top: 116px;
-  margin-left: 91px;
+  margin-top: 201px;
+  margin-left: 107px;
   max-width: 917px;
   height: 100px;
   font-size: 40px;
@@ -81,7 +80,7 @@ header {
   top: 35px;
   font-size: 12px;
   line-height: 18px;
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .language-2 {
@@ -92,7 +91,7 @@ header {
   top: 35px;
   font-size: 12px;
   line-height: 18px;
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .language-1:hover, .language-2:hover {
@@ -103,6 +102,47 @@ header {
   position: absolute;
   bottom: 4px;
   right: 4px;
+}
+
+.cookies {
+  background-color: #fff;
+  color: #332A26;
+  width: 291px;
+  height: 52px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 18px;
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  z-index: 999;
+}
+
+.cookies p {
+  margin: 8px 6px 8px 16px;
+}
+
+.btn-cookies {
+  position: relative;
+  color: #0C0C0C !important;
+  background: #fff !important;
+  border: 2px solid #0C0C0C;
+  box-shadow: 0px 34px 80px rgba(36, 30, 27, 0.2);
+  font-size: 14px !important;
+  margin-right: 16px;
+  padding: 4px 33px !important;
+  height: 28px !important;
+}
+
+.btn-cookies:hover {
+  border: 3px solid #EE1D4C;
+}
+
+.btn-cookies span {
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
 
 .btn {
@@ -118,7 +158,7 @@ header {
 }
 
 .btn-header {
-  margin-top: 56px;
+  margin-top: 48px;
   width: 304px;
   display: inline;
 }
@@ -235,10 +275,6 @@ tr:last-child {
   line-height: 24px;
 }
 
-.contact-span {
-  text-decoration: underline #fff;
-}
-
 .contact-privacy {
   font-size: 12px;
   line-height: 18px;
@@ -246,18 +282,18 @@ tr:last-child {
 }
 
 .contact-input {
-    background: transparent;
-    border: 1px solid #fff;
-    width: 100%;
-    margin-bottom: 12px;
-    font-size: 16px;
-    line-height: 24px;
-    padding: 11px 13px 8px;
-    color: #fff;
+  background: transparent;
+  border: 1px solid #fff;
+  width: 100%;
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 11px 13px 8px;
+  color: #fff;
 }
 
 .contact-input::placeholder {
-    color: #fff;
+  color: #fff;
 }
 
 .g-recaptcha {
@@ -276,25 +312,26 @@ tr:last-child {
 }
 
 #toContactBtn {
-    visibility: hidden;
-    bottom: 16px;
-    position: fixed;
+  visibility: hidden;
+  bottom: 16px;
+  position: fixed;
 }
 
 .align-right {
   float:right;
   transform: translateX(110%);
 }
+
 .slide-in {
   opacity:0;
   transition:1s;
 }
+
 .active {
   opacity:1;
    transition: transform .5s;
   -webkit-transition: transform .5s;
   transform: translateX(0%);
-
 }
 
 
@@ -330,11 +367,11 @@ tr:last-child {
   body {
     border-left: 8px solid #fff;
     border-right: 8px solid #fff;  
-    z-index: 300;
+    z-index: 999;
   }
 
   body:before, body:after {
-      height: 8px;
+    height: 8px;
   }
 
   .logo {
@@ -357,14 +394,11 @@ tr:last-child {
     top: 31px;
   }
 
-  header {
-    margin-bottom: 100px;
-  }
-
   .header-h1 {
     font-size: 34px;
     line-height: 42px;
-    margin: 0 32px;
+    padding-top: 38px;
+    padding-left: 8px;
   }
 
   .btn-header {
@@ -376,29 +410,65 @@ tr:last-child {
 
   .bg-cover {
     border-bottom-right-radius: 0px;
+    border-bottom: 8px solid #fff;
   }
 
   .gradient-div {
+    position: relative;
     border-bottom-right-radius: 0px;
-    bottom: 0;
+    bottom: -8px;
   }
 
-  .header-container {
+  .gradient-div {
     height: calc(100vh - 154px);
   }
 
+  .detail-cover {
+    background-image: none;
+  }
+
+  .detail-cover::before {
+    content: '';
+    background: url('/assets/3D/ringi-aripark3.jpg');
+    height: 256px;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    z-index: -1;
+  }
+
   .detail-side {
-    padding-top: 20px;
-    width: 100vw;
+    margin-top: 256px;
+    width: calc(100vw - 8px);
+    padding: 36px 32px 88px 64px !important;
+  }
+
+  .detail-h2 {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 24px;
+  }
+
+  .btn-detail {
+    width: 100%;
   }
 
   .contact-side {
-    padding-top: 20px;
+    padding: 64px 32px 81px 32px !important;
     width: calc(100vw - 8px);
   }
 
   .contact-cover {
-    margin-bottom: 60px;
+    margin-top: 344px;
+    padding-bottom: 181px;
+    height: 887px;
+  }
+
+  .contact-h2 {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 24px;
+    white-space: nowrap;
   }
 
   #toContactBtn{
@@ -407,6 +477,10 @@ tr:last-child {
 
   .btn-contact {
     margin-top: -20px;
+  }
+
+  .contact-nr {
+    display: block;
   }
 
   .g-recaptcha {
@@ -428,6 +502,10 @@ tr:last-child {
   }
 
   .header-h1 {
-    margin-bottom: 50px;
+    margin: 50px auto;
+  }
+
+  .cookies {
+    display: none;
   }
 }
